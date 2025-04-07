@@ -1,0 +1,211 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'Pretendard Variable', sans-serif;
+  color: #111;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* 이름 섹션 */
+.intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* 이름 */
+.name-link {
+  font-size: 3rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+  opacity: 0;
+  animation: fadeUp 2s ease forwards;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+.name-link:hover {
+  color: #666;
+}
+
+/* 연락처 섹션 */
+.contact {
+  display: none;
+  opacity: 0;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Instagram / Email 링크 */
+.contact a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: none;
+}
+
+#contact-info p {
+  margin: 4px 0;
+}
+
+/* 닫기 버튼 */
+.close-button {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.close-button:hover {
+  color: #f00;
+}
+
+/* Don't Cry 버튼 */
+.dont-cry-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  color: #888;
+  background-color: transparent;
+  border: 2px solid #888;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.dont-cry-button:hover {
+  background-color: #888;
+  color: white;
+}
+
+.dont-cry-button:hover .dont-cry-text {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 비 내리는 배경 */
+.rain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.drop {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: black;
+  opacity: 0.8;
+  animation: dropFall linear infinite;
+}
+
+/* 떨어지는 애니메이션 */
+@keyframes dropFall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* 이름 등장 */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+  }
+}
+
+/* 버튼 페이드 아웃 */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .name-link {
+    font-size: 2rem;
+  }
+
+  .contact {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .dont-cry-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px 0;
+    text-align: center;
+  }
+
+  .close-button {
+    font-size: 20px;
+    margin-bottom: 16px;
+    top: 0;
+  }
+
+  #contact-info p,
+  #additional-links p {
+    font-size: 0.95rem;
+  }
+
+  #additional-links a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
