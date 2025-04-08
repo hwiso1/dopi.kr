@@ -54,12 +54,13 @@ main {
 
 /* Instagram / Email 링크 */
 .contact a {
-  color: #0077cc;
+  color: #111;
   text-decoration: none;
   font-weight: bold;
 }
 
 .contact a:hover {
+  color: #888;
   text-decoration: none;
 }
 
@@ -163,16 +164,6 @@ a {
     transform: translateY(-50px);
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 768px) {
   .name-link {
