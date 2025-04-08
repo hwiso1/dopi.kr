@@ -5,40 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Only Desktop</title>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* 전체 높이 */
+      overflow: hidden; /* 스크롤 방지 */
+      touch-action: none; /* 모바일 터치 스크롤 방지 */
+      user-select: none; /* 텍스트 선택 방지 */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin: 0;
-      height: 100vh; /* 화면 전체 높이 */
       display: flex;
       justify-content: center;
       align-items: center; /* 화면 정중앙에 배치 */
       background-color: #f0f0f0; /* 배경색 */
+      pointer-events: none; /* 마우스 클릭/복사 방지 */
     }
 
     h2 {
-      font-size: 8vw; /* 글씨 크기를 조금 줄임 */
+      font-size: 8vw; /* 글씨 크기 */
       color: #333;
-      animation: shake 0.3s ease-in-out infinite; /* 진동 애니메이션 적용 */
+      animation: shake 0.3s ease-in-out infinite; /* 진동 애니메이션 */
+      pointer-events: none; /* 마우스 이벤트 차단 */
     }
 
-    /* 전기 감전처럼 텍스트가 흔들리는 애니메이션 */
+    /* 전기 감전처럼 흔들리는 효과 */
     @keyframes shake {
-      0% {
-        transform: translateX(0);
-      }
-      25% {
-        transform: translateX(-10px); /* 왼쪽으로 흔들림 */
-      }
-      50% {
-        transform: translateX(10px); /* 오른쪽으로 흔들림 */
-      }
-      75% {
-        transform: translateX(-10px); /* 왼쪽으로 다시 흔들림 */
-      }
-      100% {
-        transform: translateX(0); /* 원위치 */
-      }
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
     }
   </style>
 </head>
