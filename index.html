@@ -18,6 +18,15 @@
    <meta name="twitter:url" content="" />
 
   <link rel="stylesheet" href="my-portfolio-site/css/style.css" />
+
+  <script>
+    if (location.search.includes('fbclid')) {
+      const cleanUrl = location.origin + location.pathname;
+      history.replaceState(null, '', cleanUrl);
+    }
+  </script>
+</head>
+
   <style>
     body.fade-out { animation: fadeOut 3s forwards; }
     @keyframes fadeOut { to { opacity: 0; } }
