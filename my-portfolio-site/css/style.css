@@ -87,8 +87,8 @@ main {
   color: #f00;
 }
 
-/* Dig 버튼 */
-.Dig-button {
+/* Don't Cry 버튼 */
+.dont-cry-button {
   display: inline-block;
   margin-top: 40px;
   padding: 12px 30px;
@@ -103,12 +103,12 @@ main {
   user-select: none;
 }
 
-.Dig-button:hover {
+.dont-cry-button:hover {
   background-color: #888;
   color: white;
 }
 
-.Dig-button:hover .Dig-text {
+.dont-cry-button:hover .dont-cry-text {
   color: white;
 }
 
@@ -177,7 +177,7 @@ a {
     padding: 20px;
   }
 
-  .Dig-button {
+  .dont-cry-button {
     width: 100%;
     font-size: 1rem;
     padding: 14px 0;
